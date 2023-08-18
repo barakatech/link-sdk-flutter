@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:lean_sdk_flutter/lean_data_types.dart';
 import 'package:lean_sdk_flutter/lean_sdk_flutter.dart';
 
 void main() {
@@ -29,7 +30,8 @@ class Home extends StatelessWidget {
       Permission.identity,
       Permission.transactions,
       Permission.balance,
-      Permission.accounts
+      Permission.accounts,
+      Permission.payments,
     ];
     var isSandbox = true;
 

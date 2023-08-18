@@ -44,6 +44,18 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "flutter_inappwebview",
+      "rootUri": "file:///Users/ahmadal-ghambi/.pub-cache/hosted/pub.dev/flutter_inappwebview-6.0.0-beta.22",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "flutter_inappwebview_internal_annotations",
+      "rootUri": "file:///Users/ahmadal-ghambi/.pub-cache/hosted/pub.dev/flutter_inappwebview_internal_annotations-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
       "name": "flutter_lints",
       "rootUri": "file:///Users/ahmadal-ghambi/.pub-cache/hosted/pub.dev/flutter_lints-2.0.1",
       "packageUri": "lib/",
@@ -52,6 +64,12 @@
     {
       "name": "flutter_test",
       "rootUri": "file:///Users/ahmadal-ghambi/fvm/versions/3.10.5/packages/flutter_test",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///Users/ahmadal-ghambi/fvm/versions/3.10.5/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
@@ -88,12 +106,6 @@
     {
       "name": "path",
       "rootUri": "file:///Users/ahmadal-ghambi/.pub-cache/hosted/pub.dev/path-1.8.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "plugin_platform_interface",
-      "rootUri": "file:///Users/ahmadal-ghambi/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -146,37 +158,13 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "webview_flutter",
-      "rootUri": "file:///Users/ahmadal-ghambi/.pub-cache/hosted/pub.dev/webview_flutter-3.0.4",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
-      "name": "webview_flutter_android",
-      "rootUri": "file:///Users/ahmadal-ghambi/.pub-cache/hosted/pub.dev/webview_flutter_android-2.9.5",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
-      "name": "webview_flutter_platform_interface",
-      "rootUri": "file:///Users/ahmadal-ghambi/.pub-cache/hosted/pub.dev/webview_flutter_platform_interface-1.9.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "webview_flutter_wkwebview",
-      "rootUri": "file:///Users/ahmadal-ghambi/.pub-cache/hosted/pub.dev/webview_flutter_wkwebview-2.9.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
-    },
-    {
       "name": "lean_sdk_flutter",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2023-08-18T13:24:26.456368Z",
+  "generated": "2023-08-18T13:29:31.410234Z",
   "generator": "pub",
   "generatorVersion": "3.0.5"
 }
