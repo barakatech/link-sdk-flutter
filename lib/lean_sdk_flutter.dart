@@ -20,6 +20,7 @@ class Lean extends StatefulWidget {
   final LeanCallback? callback;
   final LeanActionCancelled? actionCancelled;
   final LeanActionType _actionType;
+  final String? accountId;
 
   const Lean.connect(
       {super.key,
@@ -31,7 +32,8 @@ class Lean extends StatefulWidget {
       this.country = Country.uae,
       this.callback,
       this.bankId = '',
-      this.actionCancelled})
+      this.actionCancelled,
+      this.accountId})
       : _actionType = LeanActionType.connect,
         paymentIntentId = null,
         reconnectId = null;
@@ -45,7 +47,8 @@ class Lean extends StatefulWidget {
       this.country = Country.uae,
       this.callback,
       this.bankId = '',
-      this.actionCancelled})
+      this.actionCancelled,
+      this.accountId})
       : _actionType = LeanActionType.createPaymentSource,
         reconnectId = null,
         paymentIntentId = null,
@@ -60,7 +63,8 @@ class Lean extends StatefulWidget {
       this.country = Country.uae,
       this.callback,
       this.bankId = '',
-      this.actionCancelled})
+      this.actionCancelled,
+      this.accountId})
       : _actionType = LeanActionType.reconnect,
         customerId = null,
         paymentIntentId = null,
@@ -75,7 +79,8 @@ class Lean extends StatefulWidget {
       this.country = Country.uae,
       this.callback,
       this.bankId = '',
-      this.actionCancelled})
+      this.actionCancelled,
+      this.accountId})
       : _actionType = LeanActionType.pay,
         customerId = null,
         reconnectId = null,
@@ -163,6 +168,7 @@ class _LeanState extends State<Lean> {
           widget.customerId,
           widget.isSandbox,
           widget.paymentIntentId,
+          widget.accountId,
         );
     }
   }
