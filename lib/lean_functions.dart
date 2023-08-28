@@ -63,7 +63,8 @@ class LeanFunctions {
     ''');
   }
 
-  static String pay(String appToken, String? customerId, bool isSandbox) {
+  static String pay(String appToken, String? customerId, bool isSandbox,
+      String? paymentIntentId) {
     return ('''
           function postResponse(status) {
               status.method = "PAY"
@@ -74,6 +75,7 @@ class LeanFunctions {
               app_token: "$appToken",
               customer_id: "$customerId",
               sandbox: $isSandbox,
+              payment_intent_id: "$paymentIntentId",
               callback: postResponse
             });
           } catch (e) {

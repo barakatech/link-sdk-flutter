@@ -162,6 +162,7 @@ class _LeanState extends State<Lean> {
           widget.appToken,
           widget.customerId,
           widget.isSandbox,
+          widget.paymentIntentId,
         );
     }
   }
