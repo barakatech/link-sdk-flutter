@@ -24,7 +24,12 @@ class LeanFunctions {
   }
 
   static String createPaymentSource(
-      String appToken, String? customerId, bool isSandbox) {
+    String appToken,
+    String? customerId,
+    bool isSandbox,
+    String? bankId,
+    String? paymentDestinationId,
+  ) {
     return ('''
           function postResponse(status) {
               status.method = "CREATE_PAYMENT_SOURCE"
@@ -35,6 +40,8 @@ class LeanFunctions {
               app_token: "$appToken",
               customer_id: "$customerId",
               sandbox: $isSandbox,
+              bank_identifier: "$bankId",
+              payment_destination_id: "$paymentDestinationId",
               callback: postResponse
             });
           } catch (e) {

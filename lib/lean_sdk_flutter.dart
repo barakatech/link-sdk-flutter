@@ -21,68 +21,73 @@ class Lean extends StatefulWidget {
   final LeanActionCancelled? actionCancelled;
   final LeanActionType _actionType;
   final String? accountId;
+  final String? paymentDestinationId;
 
-  const Lean.connect(
-      {super.key,
-      required this.appToken,
-      required this.customerId,
-      required this.permissions,
-      this.version = 'latest',
-      this.isSandbox = true,
-      this.country = Country.uae,
-      this.callback,
-      this.bankId = '',
-      this.actionCancelled,
-      this.accountId})
-      : _actionType = LeanActionType.connect,
+  const Lean.connect({
+    super.key,
+    required this.appToken,
+    required this.customerId,
+    required this.permissions,
+    this.version = 'latest',
+    this.isSandbox = true,
+    this.country = Country.uae,
+    this.callback,
+    this.bankId = '',
+    this.actionCancelled,
+    this.accountId,
+    this.paymentDestinationId,
+  })  : _actionType = LeanActionType.connect,
         paymentIntentId = null,
         reconnectId = null;
 
-  const Lean.createPaymentSource(
-      {super.key,
-      required this.appToken,
-      required this.customerId,
-      this.version = 'latest',
-      this.isSandbox = true,
-      this.country = Country.uae,
-      this.callback,
-      this.bankId = '',
-      this.actionCancelled,
-      this.accountId})
-      : _actionType = LeanActionType.createPaymentSource,
+  const Lean.createPaymentSource({
+    super.key,
+    required this.appToken,
+    required this.customerId,
+    this.version = 'latest',
+    this.isSandbox = true,
+    this.country = Country.uae,
+    this.callback,
+    this.bankId = '',
+    this.actionCancelled,
+    this.accountId,
+    this.paymentDestinationId,
+  })  : _actionType = LeanActionType.createPaymentSource,
         reconnectId = null,
         paymentIntentId = null,
         permissions = null;
 
-  const Lean.reconnect(
-      {super.key,
-      required this.appToken,
-      required this.reconnectId,
-      this.version = 'latest',
-      this.isSandbox = true,
-      this.country = Country.uae,
-      this.callback,
-      this.bankId = '',
-      this.actionCancelled,
-      this.accountId})
-      : _actionType = LeanActionType.reconnect,
+  const Lean.reconnect({
+    super.key,
+    required this.appToken,
+    required this.reconnectId,
+    this.version = 'latest',
+    this.isSandbox = true,
+    this.country = Country.uae,
+    this.callback,
+    this.bankId = '',
+    this.actionCancelled,
+    this.accountId,
+    this.paymentDestinationId,
+  })  : _actionType = LeanActionType.reconnect,
         customerId = null,
         paymentIntentId = null,
         permissions = null;
 
-  const Lean.pay(
-      {super.key,
-      required this.appToken,
-      required this.paymentIntentId,
-      this.version = 'latest',
-      this.isSandbox = true,
-      this.country = Country.uae,
-      this.callback,
-      this.bankId = '',
-      this.actionCancelled,
-      this.accountId})
-      : _actionType = LeanActionType.pay,
-        customerId = null,
+  const Lean.pay({
+    super.key,
+    required this.appToken,
+    required this.paymentIntentId,
+    this.version = 'latest',
+    this.isSandbox = true,
+    this.country = Country.uae,
+    this.callback,
+    this.bankId = '',
+    this.actionCancelled,
+    this.accountId,
+    this.customerId,
+    this.paymentDestinationId,
+  })  : _actionType = LeanActionType.pay,
         reconnectId = null,
         permissions = null;
 
@@ -161,6 +166,8 @@ class _LeanState extends State<Lean> {
           widget.appToken,
           widget.customerId,
           widget.isSandbox,
+          widget.bankId,
+          widget.paymentDestinationId,
         );
       case LeanActionType.pay:
         return LeanFunctions.pay(
