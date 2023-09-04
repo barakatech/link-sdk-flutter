@@ -1,7 +1,7 @@
 import 'dart:convert';
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
-import 'dart:js_interop';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:lean_sdk_flutter/lean_data_types.dart';
@@ -114,7 +114,7 @@ class _LeanState extends State<Lean> {
     if (widget.callback != null) {
       try {
         // Return 'LeanResponse' if success
-        final message = event.toDart as html.MessageEvent;
+        final message = event as html.MessageEvent;
         final leanResponse = LeanResponse.fromJson(json.decode(message.data));
         widget.callback!(leanResponse);
       } catch (e) {
